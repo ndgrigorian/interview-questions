@@ -57,6 +57,7 @@ class SuffixTree:
                 current_index += 1
                 if current_index < len(query):
                     current_phrase.append(query[current_index])
+                    
         return query_phrases
 
 
@@ -71,6 +72,7 @@ def phrasel_search(P, Queries):
         query_phrases = suffix_tree.tree_query(query_tokens, extra_token_limit)
         if query_phrases:
             ans.append(query_phrases)
+            
     return ans
 
 
